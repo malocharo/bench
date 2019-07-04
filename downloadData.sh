@@ -1,10 +1,13 @@
 #!/bin/bash
 
-TMP=/tmp/nosqlbenchmark
+#TMP=/tmp/nosqlbenchmark
+TMP=~/Documents/nosql-tests
 DOWNLOADS=$TMP/downloads
 PROFILES=$DOWNLOADS/soc-pokec-profiles.txt.gz
 RELATIONS=$DOWNLOADS/soc-pokec-relationships.txt.gz
 TMPPROFILES=$DOWNLOADS/soc-pokec-profiles.txt.gz.tmp
+SCRIPT=dataset/reducer.py
+REDUCE=$DOWNLOADS/soc-pokec-profiles-red.txt
 
 mkdir -p $DOWNLOADS
 

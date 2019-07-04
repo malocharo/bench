@@ -2,7 +2,7 @@
 
 BENCHMARK=${1-`pwd`}
 DB=${2-`pwd`/databases}/arangodb
-TMPDIR=${3-/tmp}
+TMPDIR=${3-~/Documents/nosql-tests}
 DOWNLOADS=$TMPDIR/downloads
 TMPZIP=$DOWNLOADS/arangodbTar
 
@@ -22,10 +22,10 @@ then
 fi
 
 (cd $DB; ./usr/sbin/arangod pokec-rocksdb --server.storage-engine rocksdb --server.authentication false --javascript.app-path apps --javascript.startup-directory usr/share/arangodb3/js --log.file /var/tmp/arangodb.log &)
-sleep 3
+sleep 10
 START=`date +%s`
 $BENCHMARK/arangodb/import.sh "pokec" $DB $BENCHMARK
 END=`date +%s`
 echo "Import took: $((END - START)) seconds"
-sudo pkill arangod
+#sudo pkill arangod
 

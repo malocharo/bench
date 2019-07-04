@@ -2,7 +2,7 @@
 
 BENCHMARK=${1-`pwd`}
 DB=${2-`pwd`/databases}/neo4j
-TMPDIR=${3-/tmp}
+TMPDIR=${3-~/Documents/nosql-tests}
 DOWNLOADS=$TMPDIR/downloads
 TMPZIP=$DOWNLOADS/neo4jTar
 

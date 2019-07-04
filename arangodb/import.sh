@@ -8,7 +8,7 @@ echo "Usage [pokec.db] [path-to-arangodb] [path-to-benchmark]"
 ARANGODB=${2-databases/arangodb}
 DB=$ARANGODB/data/databases/${1-pokec}
 BENCHMARK=${3-`pwd`}
-TMP=/tmp/nosqlbenchmark
+TMP=~/Documents/nosql-tests
 DOWNLOADS=$TMP/downloads
 
 PROFILES_IN=$DOWNLOADS/soc-pokec-profiles.txt.gz
@@ -22,7 +22,7 @@ echo "ARANGODB DIRECTORY: $ARANGODB"
 echo "BENCHMARK DIRECTORY: $BENCHMARK"
 echo "DOWNLOAD DIRECTORY: $DOWNLOADS"
 
-$BENCHMARK/downloadData.sh
+#$BENCHMARK/downloadData.sh
 
 set -e
 
