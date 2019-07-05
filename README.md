@@ -77,4 +77,23 @@ To run a single test against one database, we execute `benchmark.js` over node.
 To run the complete test against every database, we simply execute `runAll.sh`.
 
     ./runAll.sh <server-ip> <num-runs>    
+## Reduce the dataset
+Two python script are available to reduce the dataset in the directory dataset
+
+reducer.py take the number of profiles you want to use in your database.
+exemple : ./reducer.py 1000
+will generate a file with 1000 profiles and every relations between every profiles.
+exemple : ./reducer.py -1
+will reset the state of the profile and relation files.
+
+randomizer.py will generate a JSON file of random profiles to be use in shortest test.
+exemple : ./randomize.py shortest 1000
+while generate 1000 profiles that are in the database and put them in shortest1000.json
+
+## Run custom test
+the best way to perform a custom test on Neo4J (for exemple)  is to use the scripts as follow :
+./reducer.py 10000
+./setupAll.sh
+./randomizer.py shortest 1000
+node benchmark neo4j -t shortest
 
