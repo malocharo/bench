@@ -40,7 +40,7 @@
     "neo4j-driver": "1.5.3",
     "orientjs": "2.2.7",
     "pg-promise": "7.4.1",
-    "underscore": "1.8.3",
+    "underscore": "1.12.1",
     "yargs": "^9.0.1"
   }
 }
